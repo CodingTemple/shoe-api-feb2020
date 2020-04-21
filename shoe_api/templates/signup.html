@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h1>Signup and Login to get an API Key</h1>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <fieldset>
+        {{ form.email.label}}
+        {{ form.email() }}
+    </fieldset>
+    <fieldset>
+        {{ form.password.label }}
+        {{ form.password() }}
+    </fieldset>
+    <fieldset>
+        {{ form.confirm_pass.label }}
+        {{ form.confirm_pass() }}
+    </fieldset>
+    {{ form.submit() }}
+</form>
+
+{% endblock content %}
